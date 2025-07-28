@@ -2,7 +2,7 @@
 
 This is my music composer portfolio website.
 
-I cloned the (Vercel next.js porfolio template)[https://github.com/vercel/examples/tree/main/solutions/blog], added some goodies such as (@wavesurver/react)[https://www.npmjs.com/package/@wavesurfer/react], and generally played with the site structure until I Was happy with it.
+I cloned the [Vercel next.js porfolio template](https://github.com/vercel/examples/tree/main/solutions/blog), added some goodies such as [@wavesurver/react](https://www.npmjs.com/package/@wavesurfer/react), and generally played with the site structure until I Was happy with it.
 
 ## Licensing
 
