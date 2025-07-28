@@ -1,15 +1,10 @@
 const compositions = [
   {
-    title: "Autumn Rain",
-    description: "A piano piece inspired by seasonal transitions.",
-    file: "/audio/track.wav",
-    tags: ["melodic", "atmospheric"],
-  },
-  {
-    title: "Evening Glow",
-    description: "Ambient electronic piece using analog synths.",
-    file: "/audio/track.wav",
-    tags: ["uplifting", "soundtrack"],
+    title: "Echoes of the forgotten",
+    description:
+      "Soft melodies set a melancholic mood through a rain-soaked city",
+    file: "/audio/echoes_of_the_forgotten.mp3",
+    tags: ["atmospheric", "piano"],
   },
 ];
 
