@@ -14,12 +14,7 @@ export default function Home() {
         </div>
       </div>
       {compositions.map((track, idx) => (
-        <WaveformPlayer
-          src={track.file}
-          title={track.title}
-          description={track.description}
-          idx={idx}
-        />
+        <WaveformPlayer track={track} idx={idx} />
       ))}
       <p className="text-gray-400 text-center py-10">
         Like what you hear?{" "}

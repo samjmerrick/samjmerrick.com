@@ -4,16 +4,13 @@ import { useEffect, useRef } from "react";
 import { useWavesurfer } from "@wavesurfer/react";
 import { PlayCircleIcon, PauseCircleIcon } from "@heroicons/react/24/solid";
 import { useWaveformContext } from "app/components/waveformcontext";
+import { Composition } from "@data/compositions";
 
 export default function WaveformPlayer({
-  src,
-  title,
-  description,
+  track,
   idx,
 }: {
-  src: string;
-  title: string;
-  description: string;
+  track: Composition;
   idx: number;
 }) {
   const containerRef = useRef(null);
@@ -21,7 +18,7 @@ export default function WaveformPlayer({
 
   const { wavesurfer, isReady, isPlaying } = useWavesurfer({
     container: containerRef,
-    url: src,
+    url: track.file,
     waveColor: "grey",
     barWidth: 4,
     height: 80,
@@ -59,13 +56,20 @@ export default function WaveformPlayer({
     <div key={idx} className="my-16 flex flex-row content-center ">
       <img className="" />
       <div className="w-full">
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center">
           <button onClick={onPlayPause} className="w-14 mr-2 cursor-pointer">
             {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
           </button>
-          <div>
-            <h2 className="text-2xl font-semibold">{title}</h2>
-            <p className="text-gray-600 mb-2">{description}</p>
+          <div className="w-full">
+            <h2 className="text-2xl font-semibold">{track.title}</h2>
+            <p className="text-gray-600 mb-2">{track.description}</p>
+          </div>
+          <div className="flex flex-row ">
+            {track.tags.map((tag) => (
+              <p className="mr-2 bg-neutral-800 rounded-md px-2 py-1 capitalize  text-sm ">
+                {tag}
+              </p>
+            ))}
           </div>
         </div>
         <div ref={containerRef} className=" w-full cursor-pointer" />
