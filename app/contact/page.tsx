@@ -7,10 +7,13 @@ export default function Contact() {
       </p>
       <p>
         Drop me a message at
-        <a href="mailto:samjmerrick@gmail.com" className="text-blue-600">
+        <a
+          href="mailto:samjmerrick@gmail.com"
+          className="text-blue-400 hover:text-blue-600 transition-colors"
+        >
           &nbsp;samjmerrick@gmail.com&nbsp;
         </a>
-        and let's have a chat.
+        and let's chat about your project.
       </p>
     </section>
   );

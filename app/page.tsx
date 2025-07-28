@@ -23,7 +23,10 @@ export default function Home() {
       ))}
       <p className="text-gray-400 text-center py-10">
         Like what you hear?{" "}
-        <a href="/contact" className="text-blue-400">
+        <a
+          href="/contact"
+          className="text-blue-400 hover:text-blue-600 transition-colors"
+        >
           Let's chat
         </a>
       </p>
