@@ -5,7 +5,17 @@ import { useWavesurfer } from "@wavesurfer/react";
 import { PlayCircleIcon, PauseCircleIcon } from "@heroicons/react/24/solid";
 import { useWaveformContext } from "app/components/waveformcontext";
 
-export default function WaveformPlayer({ src }: { src: string }) {
+export default function WaveformPlayer({
+  src,
+  title,
+  description,
+  idx,
+}: {
+  src: string;
+  title: string;
+  description: string;
+  idx: number;
+}) {
   const containerRef = useRef(null);
   const { stopAll, registerStopCallback } = useWaveformContext();
 
@@ -14,7 +24,7 @@ export default function WaveformPlayer({ src }: { src: string }) {
     url: src,
     waveColor: "grey",
     barWidth: 4,
-    height: 100,
+    height: 80,
   });
 
   // Register how to stop this player
@@ -46,11 +56,20 @@ export default function WaveformPlayer({ src }: { src: string }) {
   };
 
   return (
-    <div className="flex flex-row">
-      <button onClick={onPlayPause} className="w-14 mx-2 cursor-pointer">
-        {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
-      </button>
-      <div ref={containerRef} className="w-full cursor-pointer" />
+    <div key={idx} className="my-16 flex flex-row content-center ">
+      <img className="" />
+      <div className="w-full">
+        <div className="flex flex-row">
+          <button onClick={onPlayPause} className="w-14 mr-2 cursor-pointer">
+            {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
+          </button>
+          <div>
+            <h2 className="text-2xl font-semibold">{title}</h2>
+            <p className="text-gray-600 mb-2">{description}</p>
+          </div>
+        </div>
+        <div ref={containerRef} className=" w-full cursor-pointer" />
+      </div>
     </div>
   );
 }
