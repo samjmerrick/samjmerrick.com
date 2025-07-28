@@ -20,6 +20,12 @@ export default function Home() {
           <WaveformPlayer src={track.file} />
         </div>
       ))}
+      <p className="text-gray-400 text-center py-10">
+        Like what you hear?{" "}
+        <a href="/contact" className="text-blue-400">
+          Let's chat
+        </a>
+      </p>
     </div>
   );
 }

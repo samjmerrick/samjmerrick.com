@@ -1,13 +1,17 @@
 export default function Contact() {
   return (
-    <div className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">Contact Me</h1>
+    <section>
+      <h1 className="font-semibold text-2xl mb-4 tracking-tighter">Contact</h1>
       <p className="mb-4">
-        You can reach me at &nbsp;
-        <a href="mailto:samjmerrick@gmail.com" className="text-blue-600">
-          samjmerrick@gmail.com
-        </a>
+        I currently have good availablily for collaborations.
       </p>
-    </div>
+      <p>
+        Drop me a message at
+        <a href="mailto:samjmerrick@gmail.com" className="text-blue-600">
+          &nbsp;samjmerrick@gmail.com&nbsp;
+        </a>
+        and let's have a chat.
+      </p>
+    </section>
   );
 }
