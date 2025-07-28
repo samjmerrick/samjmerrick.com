@@ -64,7 +64,8 @@ export default function WaveformPlayer({
             <h2 className="text-2xl font-semibold">{track.title}</h2>
             <p className="text-gray-600 mb-2">{track.description}</p>
           </div>
-          <div className="flex flex-row hidden md:visible ">
+
+          <div className="hidden md:flex flex-row ">
             {track.tags.map((tag) => (
               <p className="mr-2 bg-neutral-800 rounded-md px-2 py-1 capitalize  text-sm ">
                 {tag}
