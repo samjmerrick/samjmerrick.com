@@ -90,7 +90,12 @@ export default function WaveformPlayer({
             {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
           </button>
           <div className="w-full">
-            <h2 className="text-2xl font-semibold">{track.title}</h2>
+            <h2
+              className="text-2xl font-semibold cursor-pointer"
+              onClick={onPlayPause}
+            >
+              {track.title}
+            </h2>
             <p className="text-gray-600 mb-2">{track.description}</p>
           </div>
 
