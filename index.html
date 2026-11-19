@@ -8,6 +8,7 @@
 <meta property="og:title" content="Sam Merrick — ML & computer vision leadership">
 <meta property="og:description" content="Leading ML teams on hard computer vision problems in international development.">
 <meta property="og:type" content="profile">
+<meta property="og:image" content="https://samjmerrick.com/sam.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,9 +33,12 @@
 
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-text">
+      <div class="byline">
+        <img src="sam.jpg" alt="Portrait of Sam Merrick" width="72" height="72">
+        <p><span class="byline-name">Sam Merrick</span><span class="byline-role">Senior Product Manager, Simprints</span></p>
+      </div>
       <h1 id="hero-title">I lead machine learning teams building computer vision that has to work in the field, not just on the benchmark.</h1>
-      <p class="lede">Senior Product Manager at <a href="https://www.simprints.com">Simprints</a>, where I run a team of ML engineers and data scientists training and evaluating biometric recognition models for global health. Right now that means directing a $6m programme to build the first reliable contactless biometric for infants.</p>
-      <p class="aim">Looking for my next role as a Head of Machine Learning or Computer Vision in a mission-driven organisation.</p>
+      <p class="lede">At <a href="https://www.simprints.com">Simprints</a> I lead the team training and evaluating biometric recognition models for global health, with field work in Ghana, Ethiopia and South Sudan. Right now that means directing a $6m programme to build the first reliable contactless biometric for infants, running entirely on a low-spec Android phone.</p>
       <div class="actions">
         <a class="btn primary" href="mailto:samjmerrick@gmail.com">Email me</a>
         <a class="btn" href="https://www.linkedin.com/in/samjmerrick/">LinkedIn</a>
@@ -51,23 +55,23 @@
   </section>
 
   <section class="strengths" aria-labelledby="strengths-title">
-    <h2 id="strengths-title">What I bring to an ML team</h2>
+    <h2 id="strengths-title">How I lead ML teams</h2>
     <div class="strength-grid">
       <article>
         <h3>Problems without a playbook</h3>
-        <p>Infant fingerprints change shape as children grow, images come from low-cost phones in bright sun, and there is no public dataset to start from. I scope work like this into experiments a team can actually run, with clear go/no-go evidence for funders.</p>
+        <p>There is no public dataset of infant biometrics, least of all from low- and middle-income countries, and an infant's features change as they grow. I break problems like this into experiments a small team can run, and keep everyone focused on the one number that matters.</p>
       </article>
       <article>
         <h3>Evaluation that reflects reality</h3>
-        <p>I set up training, benchmarking and evaluation around data collected in the populations a model will serve, so accuracy numbers mean something when the model reaches a health clinic thousands of miles from where it was trained.</p>
+        <p>I set up training, benchmarking and evaluation around data collected from the people a model will serve, tracked over time, so accuracy numbers still hold when the model reaches a clinic in rural Ghana or South Sudan.</p>
       </article>
       <article>
         <h3>Privacy as a design constraint</h3>
         <p>Biometrics for vulnerable people raises the bar on data protection. I've led template-protection research with the ICRC and shipped it as open-source code others can audit and reuse.</p>
       </article>
       <article>
-        <h3>From model to product</h3>
-        <p>Eight years of product management across startups and scale-ups means I care whether a model ships, what it costs to run, and whether frontline health workers can use it.</p>
+        <h3>Built for the edge, not the cloud</h3>
+        <p>Our models run fully offline on low-spec Android phones, using only the phone camera. I keep the team designing for that from day one, and bring a product background that asks whether a model ships, what it costs to run, and whether a frontline health worker can use it.</p>
       </article>
     </div>
   </section>
@@ -78,19 +82,23 @@
     <article class="case">
       <div class="case-meta">
         <p class="case-org">Simprints</p>
-        <p class="case-figure">$6m</p>
-        <p class="case-figure-label">programme funding</p>
+        <p class="case-figure">40% → 90%</p>
+        <p class="case-figure-label">true match rate at 1% false match rate, over 3 months of infant growth</p>
         <p class="case-figure">4m+</p>
-        <p class="case-figure-label">training images targeted</p>
+        <p class="case-figure-label">biometric images collected</p>
+        <p class="case-figure">13,000</p>
+        <p class="case-figure-label">infants followed monthly for 12 months</p>
       </div>
       <div class="case-body">
         <h3>Contactless biometrics for infants</h3>
-        <p>Babies are the people most likely to be missed by health records, and the hardest to identify: their fingers are tiny, soft and growing. I lead the initiative to develop the first reliable contactless infant biometric recognition algorithm, from data-collection design through model training and evaluation.</p>
+        <p>Babies are the people most likely to be missed by health records, and the hardest to identify. I lead a $6m initiative to develop the first reliable contactless infant biometric recognition algorithm, from data collection through model training, evaluation and deployment.</p>
+        <p>Three things make it hard:</p>
         <ul>
-          <li>Leading a cross-functional team of ML engineers and data scientists on model training, benchmarking and evaluation.</li>
-          <li>Designing a field data-collection effort targeting over 4 million biometric images, with clinical-research standards (GCP-trained).</li>
-          <li>Translating research progress into milestones and evidence for funders and partners.</li>
+          <li><strong>No data to start from.</strong> There are no public datasets of infant biometrics, especially from low- and middle-income countries.</li>
+          <li><strong>The subject keeps changing.</strong> Infants grow fast, so a model has to recognise the same child months later.</li>
+          <li><strong>Edge only.</strong> Capture and matching run fully contactless on a low-spec Android phone, with no cloud and only the phone camera.</li>
         </ul>
+        <p>Leading a team of two ML engineers and a backend engineer, we built a longitudinal dataset of over 4 million images from a cohort of 13,000 infants, captured monthly for 12 months, and raised the true match rate at 1% false match rate from around 40% to around 90% over a three-month growth period.</p>
       </div>
     </article>
 
@@ -128,7 +136,7 @@
         <p class="when">2023 – now</p>
         <div>
           <h3>Senior Product Manager, Simprints</h3>
-          <p>Non-profit deploying biometrics to verify global health outcomes. Lead ML engineers and data scientists training and evaluating biometric recognition models; infant biometrics, SimFace and template-protection research.</p>
+          <p>Non-profit deploying biometrics to verify global health outcomes. Lead a team of two ML engineers and a backend engineer training, evaluating and shipping on-device biometric recognition models, with field work in Ghana, Ethiopia and South Sudan. Infant biometrics, SimFace and template-protection research.</p>
         </div>
       </li>
       <li>
@@ -183,8 +191,8 @@
   </section>
 
   <section class="contact" id="contact" aria-labelledby="contact-title">
-    <h2 id="contact-title">Hiring a head of ML or computer vision?</h2>
-    <p>I'm especially interested in teams applying computer vision to health, identity, agriculture or climate in low- and middle-income countries. I'm based in Reading, UK, and used to working with partners across time zones.</p>
+    <h2 id="contact-title">Get in touch</h2>
+    <p>I'm based in Reading, UK, and work with partners and field teams across time zones. The best way to reach me is by email.</p>
     <div class="actions">
       <a class="btn primary" href="mailto:samjmerrick@gmail.com">samjmerrick@gmail.com</a>
       <a class="btn" href="https://www.linkedin.com/in/samjmerrick/">LinkedIn</a>

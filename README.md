@@ -11,4 +11,4 @@ Preview locally:
 
     python3 -m http.server 8000
 
-Deploy with GitHub Pages (Settings → Pages → deploy from branch, root folder).
+Deployed with GitHub Pages at samjmerrick.com (see `CNAME`).
