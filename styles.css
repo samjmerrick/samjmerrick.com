@@ -49,7 +49,9 @@ a { color: var(--teal); text-underline-offset: 0.18em; text-decoration-thickness
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--annot); outline-offset: 3px; border-radius: 2px; }
 
-h1, h2, h3 { font-family: var(--sans); font-weight: 600; line-height: 1.15; margin: 0; }
+h1, h2, h3 { font-family: var(--sans); font-weight: 600; line-height: 1.15; margin: 0; text-wrap: balance; }
+p, li { text-wrap: pretty; }
+.nowrap { white-space: nowrap; }
 p { margin: 0 0 1em; }
 
 .skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--paper); padding: 8px 12px; }
@@ -156,6 +158,8 @@ section { padding-bottom: clamp(56px, 8vw, 104px) !important; }
   letter-spacing: -0.03em; color: var(--teal); margin: 0;
   font-variant-numeric: tabular-nums;
 }
+.figs { display: grid; gap: 20px; }
+.fig .case-figure-label { margin-bottom: 0; }
 .case-figure-label { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); margin: 6px 0 20px; max-width: 14rem; line-height: 1.35; }
 .case-body h3 { font-size: 1.5rem; margin-bottom: 14px; letter-spacing: -0.01em; }
 .case-body p, .case-body ul { max-width: var(--measure); }
@@ -192,7 +196,7 @@ h2.sub { font-size: 1.25rem; border-top: 0; padding-top: 0; margin-bottom: 20px;
 
 /* Contact */
 .contact { padding-bottom: 72px !important; }
-.contact h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); max-width: 20ch; }
+.contact h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); }
 .contact p { max-width: var(--measure); font-size: 1.2rem; }
 
 .foot { max-width: 76rem; margin: 0 auto; padding: 24px var(--gutter) 40px; font-family: var(--sans); color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--rule); }
@@ -204,10 +208,13 @@ h2.sub { font-size: 1.25rem; border-top: 0; padding-top: 0; margin-bottom: 20px;
   .specimen { max-width: 360px; justify-self: start; }
   .strength-grid { grid-template-columns: 1fr; gap: 32px; }
   .case, .timeline li { grid-template-columns: 1fr; }
-  .case-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
-  .case-org { flex-basis: 100%; margin-bottom: 4px; }
+  .case-org { margin-bottom: 12px; }
+  .figs { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px 20px; }
   .case-figure { font-size: 2rem; }
-  .case-figure-label { margin: 0 12px 8px 0; }
+  .fig .case-figure-label { max-width: none; }
+  .edu li { display: block; }
+  .edu li span { display: block; }
+  .edu li span:last-child { margin-top: 2px; }
 }
 @media (max-width: 480px) {
   body { font-size: 1.0625rem; }

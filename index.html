@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261119b">
+<link rel="stylesheet" href="styles.css?v=20261119c">
 </head>
 <body>
 
@@ -88,12 +88,11 @@
     <article class="case">
       <div class="case-meta">
         <p class="case-org">Simprints</p>
-        <p class="case-figure">40% → 90%</p>
-        <p class="case-figure-label">true match rate at 1% false match rate, over 3 months of infant growth</p>
-        <p class="case-figure">4m+</p>
-        <p class="case-figure-label">biometric images collected</p>
-        <p class="case-figure">13,000</p>
-        <p class="case-figure-label">infants followed monthly for 12 months</p>
+        <div class="figs">
+          <div class="fig"><p class="case-figure">40% → 90%</p> <p class="case-figure-label">true match rate at 1% false match rate, over 3 months of infant growth</p></div>
+          <div class="fig"><p class="case-figure">4m+</p> <p class="case-figure-label">biometric images collected</p></div>
+          <div class="fig"><p class="case-figure">13,000</p> <p class="case-figure-label">infants followed monthly for 12 months</p></div>
+        </div>
       </div>
       <div class="case-body">
         <h3>Contactless biometrics for infants</h3>
@@ -111,8 +110,9 @@
     <article class="case">
       <div class="case-meta">
         <p class="case-org">Simprints, open source</p>
-        <p class="case-figure">20%+</p>
-        <p class="case-figure-label">lower deployment costs</p>
+        <div class="figs">
+          <div class="fig"><p class="case-figure">20%+</p> <p class="case-figure-label">lower deployment costs</p></div>
+        </div>
       </div>
       <div class="case-body">
         <h3>SimFace: on-device face recognition</h3>
@@ -124,13 +124,14 @@
     <article class="case">
       <div class="case-meta">
         <p class="case-org">Simprints with the ICRC</p>
-        <p class="case-figure">1st</p>
-        <p class="case-figure-label">evaluation of PolyProtect for identification and fingerprints</p>
+        <div class="figs">
+          <div class="fig"><p class="case-figure">1st</p> <p class="case-figure-label">evaluation of PolyProtect for identification and fingerprints</p></div>
+        </div>
       </div>
       <div class="case-body">
         <h3>Protecting biometric templates in humanitarian systems</h3>
         <p>Led a research collaboration with the International Committee of the Red Cross to choose and evaluate a biometric template protection scheme for mobile humanitarian deployments. We selected PolyProtect and tested it on real face data from a humanitarian project in Ethiopia, measuring accuracy, irreversibility and unlinkability, and published the first evaluation of PolyProtect for identification and for fingerprints.</p>
-        <p><a href="https://arxiv.org/abs/2508.18415">Read the paper on arXiv</a> · <a href="https://github.com/Simprints/Biometrics-SimPolyProtect">SimPolyProtect on GitHub</a></p>
+        <p><a class="nowrap" href="https://arxiv.org/abs/2508.18415">Read the paper on arXiv</a> · <a class="nowrap" href="https://github.com/Simprints/Biometrics-SimPolyProtect">SimPolyProtect on GitHub</a></p>
       </div>
     </article>
   </section>
