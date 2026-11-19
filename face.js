@@ -39,9 +39,16 @@
   const dots = F.points.map(([x, y]) => el("circle", { class: "pt", cx: x, cy: y, r: 2.4 }, ptsG));
   const line = el("line", { class: "scan", x1: bx - 10, x2: bx + bw + 10, y1: by, y2: by });
 
-  // Tap toggles the mesh on touch screens.
+  // On touch screens (no hover), a tap shows the mesh for a few seconds.
   const frame = svg.parentElement;
-  frame.addEventListener("click", () => frame.classList.toggle("show-mesh"));
+  const noHover = window.matchMedia("(hover: none)");
+  let hideTimer = null;
+  frame.addEventListener("click", () => {
+    if (!noHover.matches) return;
+    frame.classList.add("show-mesh");
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => frame.classList.remove("show-mesh"), 3000);
+  });
 
   if (reduce) {
     if (counter) counter.textContent = total;

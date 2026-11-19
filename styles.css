@@ -115,7 +115,8 @@ main > section { max-width: 76rem; margin: 0 auto; padding: 0 var(--gutter); }
 .frame img, .frame svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .frame img { object-fit: cover; }
 #face .mesh { fill: none; stroke: #ffffff; stroke-width: 0.9; opacity: 0; transition: opacity 300ms ease; }
-.frame:hover #face .mesh, .frame:focus-within #face .mesh, .frame.show-mesh #face .mesh { opacity: 0.4; }
+@media (hover: hover) { .frame:hover #face .mesh { opacity: 0.4; } }
+.frame.show-mesh #face .mesh { opacity: 0.4; }
 #face .pt { fill: #ffffff; opacity: 0; }
 #face .brackets { fill: none; stroke: #ff4f8b; stroke-width: 3.5; stroke-linecap: square; }
 #face .scan { stroke: #ff4f8b; stroke-width: 2; opacity: 0; }
