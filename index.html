@@ -34,7 +34,6 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-text">
       <div class="byline">
-        <img src="sam.jpg" alt="Portrait of Sam Merrick" width="72" height="72">
         <p><span class="byline-name">Sam Merrick</span><span class="byline-role">Senior Product Manager, Simprints</span></p>
       </div>
       <h1 id="hero-title">I lead machine learning teams building computer vision that has to work in the field, not just on the benchmark.</h1>
@@ -45,11 +44,14 @@
       </div>
     </div>
 
-    <figure class="specimen" aria-hidden="true">
-      <svg id="ridges" viewBox="0 0 400 460" role="presentation"></svg>
+    <figure class="specimen">
+      <div class="frame">
+        <img src="sam.jpg" alt="Portrait of Sam Merrick" width="480" height="480">
+        <svg id="face" viewBox="0 0 800 800" aria-hidden="true"></svg>
+      </div>
       <figcaption>
-        <span class="cap-a">Ridge map, synthetic</span>
-        <span class="cap-b">Minutiae detected: <b id="minutiae-count">0</b></span>
+        <span>Face landmarks found by MediaPipe on this photo</span>
+        <span>Landmarks: <b id="lm-count">0</b></span>
       </figcaption>
     </figure>
   </section>
@@ -205,6 +207,7 @@
   <p>Sam Merrick, Reading, UK</p>
 </footer>
 
-<script src="ridges.js"></script>
+<script src="face-data.js"></script>
+<script src="face.js"></script>
 </body>
 </html>

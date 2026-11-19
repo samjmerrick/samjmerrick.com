@@ -87,8 +87,7 @@ main > section { max-width: 76rem; margin: 0 auto; padding: 0 var(--gutter); }
   margin-bottom: 0.7em;
 }
 .lede { font-size: 1.2rem; max-width: var(--measure); }
-.byline { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
-.byline img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex: none; }
+.byline { margin-bottom: 24px; }
 .byline p { margin: 0; font-family: var(--sans); line-height: 1.3; }
 .byline-name { display: block; font-weight: 600; }
 .byline-role { display: block; color: var(--muted); font-size: 0.95rem; }
@@ -104,8 +103,7 @@ main > section { max-width: 76rem; margin: 0 auto; padding: 0 var(--gutter); }
 .btn.primary:hover { background: var(--teal); border-color: var(--teal); }
 
 /* Specimen */
-.specimen { margin: 0; justify-self: center; width: 100%; max-width: 400px; }
-.specimen svg { display: block; width: 100%; height: auto; overflow: visible; }
+.specimen { margin: 0; justify-self: center; width: 100%; max-width: 440px; }
 .specimen figcaption {
   display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
   font-family: var(--sans); font-size: 0.85rem; color: var(--muted);
@@ -113,12 +111,15 @@ main > section { max-width: 76rem; margin: 0 auto; padding: 0 var(--gutter); }
 }
 .specimen figcaption b { color: var(--annot); font-weight: 600; font-variant-numeric: tabular-nums; }
 
-#ridges .ridge { fill: none; stroke: var(--ridge); stroke-width: 2.1; stroke-linecap: round; }
-#ridges .box { fill: none; stroke: var(--annot); stroke-width: 1.5; }
-#ridges .box-label rect { fill: var(--annot); }
-#ridges .box-label text { fill: var(--paper); font-family: var(--sans); font-size: 12px; font-weight: 600; }
-#ridges .minutia { fill: none; stroke: var(--annot); stroke-width: 1.6; }
-#ridges .minutia-tail { stroke: var(--annot); stroke-width: 1.6; }
+.frame { position: relative; aspect-ratio: 1; border-radius: 4px; overflow: hidden; background: var(--paper-2); }
+.frame img, .frame svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.frame img { object-fit: cover; }
+#face .mesh { fill: none; stroke: #ffffff; stroke-opacity: 0.38; stroke-width: 0.9; }
+#face .contour { fill: none; stroke: #ff7aa8; stroke-width: 2.2; stroke-linecap: round; }
+#face .pt { fill: #ffffff; }
+#face .box { fill: none; stroke: #ff4f8b; stroke-width: 3; }
+#face .tag rect { fill: #ff4f8b; }
+#face .tag text { fill: #fff; font-family: var(--sans); font-size: 22px; font-weight: 600; }
 
 /* Section headings */
 section h2 {
@@ -198,7 +199,7 @@ h2.sub { font-size: 1.25rem; border-top: 0; padding-top: 0; margin-bottom: 20px;
 /* Responsive */
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; }
-  .specimen { max-width: 280px; justify-self: start; }
+  .specimen { max-width: 360px; justify-self: start; }
   .strength-grid { grid-template-columns: 1fr; gap: 32px; }
   .case, .timeline li { grid-template-columns: 1fr; }
   .case-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
@@ -208,7 +209,6 @@ h2.sub { font-size: 1.25rem; border-top: 0; padding-top: 0; margin-bottom: 20px;
 }
 @media (max-width: 480px) {
   body { font-size: 1.0625rem; }
-  .specimen { max-width: 220px; }
 }
 
 @media print {
